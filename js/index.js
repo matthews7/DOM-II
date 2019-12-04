@@ -91,6 +91,17 @@ const hornTwo = document.querySelector('body');
     e.stopPropagation()
 })
 
+//Prevent Default
+
+const stopLink = document.querySelectorAll(".nav-link");
+
+stopLink.forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+    })
+})
+
+
 // document.querySelectorAll(".btn").forEach(el => {
 //     el.addEventListener("mouseenter", () => {
 //       gsap.to(el, {
