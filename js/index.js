@@ -5,8 +5,9 @@ headerBg.addEventListener("mousedown", () =>{
 })
 
 const horn = document.querySelector('.intro img');
-    horn.addEventListener('dblclick', () =>{
+    horn.addEventListener('dblclick', (e) =>{
     horn.style.width = "50%";
+    e.stopPropagation()
 })
 
 
@@ -77,7 +78,18 @@ dashBOne.addEventListener('mouseout', ()=>{
     dashBOne.style.border = "15px dotted green"
 })
 
+// stop Propagation
+const hornOne = document.querySelector('.intro');
+    hornOne.addEventListener('dblclick', (e) =>{
+    hornOne.style.border = "15px dotted cyan";
+    e.stopPropagation()
+})
 
+const hornTwo = document.querySelector('body');
+    hornTwo.addEventListener('dblclick', () =>{
+    hornTwo.style.border = "15px dotted cyan";
+    e.stopPropagation()
+})
 
 // document.querySelectorAll(".btn").forEach(el => {
 //     el.addEventListener("mouseenter", () => {
