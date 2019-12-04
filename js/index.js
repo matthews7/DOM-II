@@ -50,12 +50,32 @@ noContext.addEventListener('contextmenu', (e) => {
     e.preventDefault();
 });
 
-
-const pinkOne = document.querySelector(".content-destination")
-
-pinkOne.addEventListener('blur', () => {
-    pinkOne.style.color= 'pink';    
+const copy = document.querySelector('.intro h2')
+copy.addEventListener('copy', (event) => {
+    const selection = document.getSelection();
+    event.clipboardData.setData('text/plain', selection.toString().toUpperCase());
+    event.preventDefault();
 });
+
+function logSelection(event) {
+    const log = document.getElementById('log');
+    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+    log.textContent = `You selected: ${selection}`;
+
+}
+const input = document.querySelector('input');
+input.addEventListener('select', logSelection);
+
+
+let dashBorder = document.querySelector(".content-destination img")
+dashBorder.addEventListener('mouseenter', ()=>{
+    dashBorder.style.border = "15px dotted cyan"
+})
+
+let dashBOne = document.querySelector(".destination")
+dashBOne.addEventListener('mouseout', ()=>{
+    dashBOne.style.border = "15px dotted green"
+})
 
 
 
