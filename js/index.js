@@ -102,15 +102,15 @@ stopLink.forEach(item => {
 })
 
 
-// document.querySelectorAll(".btn").forEach(el => {
-//     el.addEventListener("mouseenter", () => {
-//       gsap.to(el, {
-//        duration: 4,
-//        rotateY: 360,
-//        ease: "elastic(1, 0.75)"
-//       })
-//     })
-//   })
+document.querySelectorAll(".btn").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      gsap.to(el, {
+       duration: 4,
+       rotateY: 360,
+       ease: "elastic(1, 0.75)"
+      })
+    })
+  })
 
 
 
